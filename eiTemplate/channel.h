@@ -130,8 +130,8 @@ public:
 private:
 	void setDefault()
 	{
-		chanel_switch = 0;
-		cm_num = 11;
+		chanel_switch = 1;
+		cm_num = 71;
 		fc = 6e10;
 	}
 };

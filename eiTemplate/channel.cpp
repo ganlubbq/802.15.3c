@@ -1282,13 +1282,18 @@ Outputs:
 	N = (double)pow((double)2, nextpow2(N));
 	Nfs	= N / ts;
 	int N_num = ceil(siz / Nfs);
-	h_dt.resize(N_num);
+	
 	for (int ray_ix = 0; ray_ix < siz; ray_ix++)
 	{
 		time_bin.push_back(round(t[ray_ix] / ts) + 1);
+		//h_dt[time_bin[ray_ix] - 1] = h_dt[time_bin[ray_ix] - 1] + h_ct[ray_ix];
+	}
+	h_dt.resize(*time_bin.rbegin());
+	for (int ray_ix = 0; ray_ix < siz; ray_ix++)
+	{
+		//time_bin.push_back(round(t[ray_ix] / ts) + 1);
 		h_dt[time_bin[ray_ix] - 1] = h_dt[time_bin[ray_ix] - 1] + h_ct[ray_ix];
 	}
-
 	vector <double> h_dt_abs;
 	double temp, h_dt_norm;
 	for (int i = 0; i < h_dt.size(); i++)
@@ -1448,7 +1453,7 @@ void tg3c_tsv_eval_r7(int cm_num, double fc, vector <complex<double>> &data_in, 
 	vector <int> beta, np, idx;
 	double N;
 	vector <complex<double>> h2, hN, h;
-
+	beta.resize(num_channels);
  	tg3c_tsv_ct_r6(nlos, num_channels, adist, fc, los_beta_flg, L_pl, Lam, lamda, Gam, gamma, std_ln_1, std_ln_2, Lmean, Omega0, smallk, sigma_fai, tx_hpbw, rx_hpbw, ant_type, op_num, beta, h_ct, h2_ct, aoa_ct, t_ct, t0, np, idx);
 
 	if (nlos == 0)
