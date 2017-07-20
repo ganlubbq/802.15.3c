@@ -100,6 +100,7 @@ BOOL CTabProtocolConfig::OnInitDialog()
 	pGroup_carrier->AddSubItem(pCarrier_sig_mode);
 	CMFCPropertyGridProperty* pCarrier_frames = new CMFCPropertyGridProperty(_T("信号帧数"),_T("1"),_T("输入所需生成信号的帧数"));
 	pGroup_carrier->AddSubItem(pCarrier_frames);
+	pGroup_carrier->AllowEdit(FALSE);
 	pCarrier_data_length = new CMFCPropertyGridProperty(_T("数据长度"),_T("123456"),_T("输入所需生成信号数据长度"), PROTO_SIG_GENLENGTH_3C);
 	pGroup_carrier->AddSubItem(pCarrier_data_length);
 	CMFCPropertyGridProperty* pCarrier_freq_offset = new CMFCPropertyGridProperty(_T("频率偏移"),_T("10000.0000Hz"),_T("显示当前频率偏移值"));
@@ -255,7 +256,28 @@ BOOL CTabProtocolConfig::OnInitDialog()
 	pChannel_switch->AddOption(_T("OFF"));
 	pChannel_switch->AllowEdit(FALSE);
 	pGroup_channel->AddSubItem(pChannel_switch);
-	pChannel_type = new CMFCPropertyGridProperty(_T("信道类型"),_T("0000"),_T("设置信道类型"),PROTO_CHAN_TYPE);
+	pChannel_type = new CMFCPropertyGridProperty(_T("信道类型"),_T("11"),_T("设置信道类型"),PROTO_CHAN_TYPE);
+	pChannel_type->AddOption(_T("11"));
+	pChannel_type->AddOption(_T("12"));
+	pChannel_type->AddOption(_T("13"));
+	pChannel_type->AddOption(_T("14"));
+	pChannel_type->AddOption(_T("15"));
+	pChannel_type->AddOption(_T("21"));
+	pChannel_type->AddOption(_T("22"));
+	pChannel_type->AddOption(_T("23"));
+	pChannel_type->AddOption(_T("24"));
+	pChannel_type->AddOption(_T("31"));
+	pChannel_type->AddOption(_T("32"));
+	pChannel_type->AddOption(_T("41"));
+	pChannel_type->AddOption(_T("42"));
+	pChannel_type->AddOption(_T("71"));
+	pChannel_type->AddOption(_T("72"));
+	pChannel_type->AddOption(_T("73"));
+	pChannel_type->AddOption(_T("81"));
+	pChannel_type->AddOption(_T("82"));
+	pChannel_type->AddOption(_T("91"));
+	pChannel_type->AddOption(_T("92"));
+	pChannel_type->AllowEdit(FALSE);
 	pGroup_channel->AddSubItem(pChannel_type);
 	pChannel_sys_bw = new CMFCPropertyGridProperty(_T("系统带宽"),_T("2124.25MHz"),_T("设置系统带宽"),PROTO_CHAN_SYSBW);
 	pGroup_channel->AddSubItem(pChannel_sys_bw);
@@ -923,6 +945,11 @@ LRESULT CTabProtocolConfig::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lpa
 				else
 					p_channel_params->chanel_switch = 1;
 			break;
+		
+		case PROTO_CHAN_TYPE:
+			p_channel_params->cm_num=atoi(str.GetBuffer());
+			break;
+
 		case PROTO_SIG_DATA_SOURCE_3C:
 			if (str.Compare("PN9") ==0)
 				p_3c_params->data_source = 0;

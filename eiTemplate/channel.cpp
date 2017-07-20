@@ -461,8 +461,9 @@ void tg3c_tsv_params_r4(int cm_num, double (&parameters)[16])
 	double a_nlos;
 
 	if(cm_num == 11)	//Experimental data Tx : 360deg, Rx : 15deg
+
 	{
-			  parameters[0] = 5;
+			  parameters[0] = 5;                         
 			  parameters[1] = 0;
 			  parameters[2] = 0;
 			  parameters[3] = -88.7;
@@ -542,7 +543,8 @@ void tg3c_tsv_params_r4(int cm_num, double (&parameters)[16])
 			 parameters[0] = 5;
 			 parameters[1] = 0;
 			 parameters[2] = -1;
-			 parameters[3] = -20 * log10(4 * pi*parameters[0] / ramda); //N / A in channel model final reponrt
+			 /*parameters[3] = -20 * log10(4 * pi*parameters[0] / ramda); *///N / A in channel model final reponrt
+			 parameters[3] = -20 * log10(20 * pi / ramda); //xiugai
 			 parameters[4] = 0;
 			 parameters[5] = 4;
 			 parameters[6] = 0.21;
@@ -659,7 +661,7 @@ void tg3c_tsv_params_r4(int cm_num, double (&parameters)[16])
 			 parameters[0] = 1;
 			 parameters[1] = 0;
 			 parameters[2] = 0;
-			 parameters[3] = -0.303*parameters[0] - 90.3;
+			 parameters[3] = -90.603;
 			 parameters[4] = 2.63;
 			 parameters[5] = 5;
 			 parameters[6] = 1 / 37.6;

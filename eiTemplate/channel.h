@@ -131,7 +131,7 @@ private:
 	void setDefault()
 	{
 		chanel_switch = 0;
-		cm_num = 21;
+		cm_num = 11;
 		fc = 6e10;
 	}
 };

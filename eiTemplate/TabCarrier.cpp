@@ -79,9 +79,9 @@ BOOL CTabCarrier::OnInitDialog()
 	pPropS1->AllowEdit(FALSE);
 	pGroup11->AddSubItem(pPropS1);
 
-	CMFCPropertyGridProperty *pPropS2=new CMFCPropertyGridProperty(_T("总采样点数"),_T("0000"),_T("采样点数目"));
-	pPropS2->Enable(FALSE);
-	pGroup11->AddSubItem(pPropS2);
+// 	CMFCPropertyGridProperty *pPropS2=new CMFCPropertyGridProperty(_T("总采样点数"),_T("0000"),_T("采样点数目"));
+// 	pPropS2->Enable(FALSE);
+// 	pGroup11->AddSubItem(pPropS2);
 
 	pGroup12->AddSubItem(new CMFCPropertyGridProperty(_T("过采样率"),_T("1"),_T("关于过采样率的说明")));
 	CMFCPropertyGridProperty* pPropS3 = new CMFCPropertyGridProperty(_T("镜像频谱"),_T("Off"),_T("镜像频谱状态：ON或OFF"));
@@ -148,6 +148,23 @@ BOOL CTabCarrier::OnInitDialog()
 
 	CMFCPropertyGridProperty* pPropS17 = new CMFCPropertyGridProperty(_T("OFDM符号速率"),_T("4.583 MHz"),_T("OFDM符号速率"));
 	pGroup13->AddSubItem(pPropS17);
+
+	pPropS3->AllowEdit(FALSE);
+	pPropS4->AllowEdit(FALSE);
+	pPropS5->AllowEdit(FALSE);
+	pPropS6->AllowEdit(FALSE);
+	pPropS7->AllowEdit(FALSE);
+	pPropS8->AllowEdit(FALSE);
+	pPropS9->AllowEdit(FALSE);
+	pPropS10->AllowEdit(FALSE);
+	pPropS11->AllowEdit(FALSE);
+	pPropS12->AllowEdit(FALSE);
+	pPropS13->AllowEdit(FALSE);
+	pPropS14->AllowEdit(FALSE);
+	pPropS15->AllowEdit(FALSE);
+	pPropS16->AllowEdit(FALSE);
+	pPropS17->AllowEdit(FALSE);
+
 
 
 
