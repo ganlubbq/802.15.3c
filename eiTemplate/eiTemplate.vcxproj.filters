@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\SysConfigWizard">
+      <UniqueIdentifier>{a006642f-2a6d-43c7-bb83-5d683560c754}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\SysConfigWizard">
+      <UniqueIdentifier>{e6eb1f85-0a59-491c-9012-2472d9bcd2e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\TabPages">
+      <UniqueIdentifier>{915671d4-42c2-458b-9821-2f5373537f5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\TabPages">
+      <UniqueIdentifier>{208c1dcf-9ee5-4efc-9e7a-d9a472da5c64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\GraphRelated">
+      <UniqueIdentifier>{ea35b7dc-ebc4-4528-9ab7-c738c2eb7330}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\GraphRelated">
+      <UniqueIdentifier>{34a03e52-4f38-4329-8a55-0bb99719c7dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Splash">
+      <UniqueIdentifier>{c42660f2-9638-4278-b877-4cde17091784}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Splash">
+      <UniqueIdentifier>{9fd620f2-7729-4835-96ef-542d828c343e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Visa">
+      <UniqueIdentifier>{a249f5ef-15f0-4b1e-aecb-3e95f00f8d41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Protocol">
+      <UniqueIdentifier>{dfccf4e4-673a-4d16-b3b7-41ba73f71ce0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Protocol">
+      <UniqueIdentifier>{69072a41-0c9d-4583-b917-face8296a389}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\rapidxml">
+      <UniqueIdentifier>{a5db8289-917d-47c7-9074-6be2367ada00}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\eiTemplate.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\eiTemplateDoc.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\eiTemplate.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\about.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\startup.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\icon_toolbar_open.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\icon_toolbar_new.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\icon_tollbar_save.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\toolbar1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\new_tool_icon\1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\new_tool_icon\2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\new_tool_icon\3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\new_tool_icon\4.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\new_tool_icon\5.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\new_tool_icon\6.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\new_tool_icon\7.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\new_tool_icon\8.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\new_tool_icon\1.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\new_tool_icon\2.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\new_tool_icon\3.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\new_tool_icon\4.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\new_tool_icon\5.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\new_tool_icon\6.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\new_tool_icon\7.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\new_tool_icon\8.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ccdf.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\wave.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\new_tool_icon\run.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image_instrument\1.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image_instrument\2.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image_instrument\3.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image_instrument\4.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image_instrument\5.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image_instrument\6.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image_instrument\1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image_instrument\2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image_instrument\3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image_instrument\4.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image_instrument\5.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image_instrument\6.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image_instrument\bitmap1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\framedigram1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\framedigram2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\framedigram3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\diagram_frame1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\diagram_frame2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\diagram_frame3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\bitmap1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\diagram_mac1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\diagram_mac2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\diagram_mac3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="eiTemplate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="eiTemplateDoc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="eiTemplateView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySplitterWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SysConfigWizard.h">
+      <Filter>头文件\SysConfigWizard</Filter>
+    </ClInclude>
+    <ClInclude Include="SysConfigWizardStep1.h">
+      <Filter>头文件\SysConfigWizard</Filter>
+    </ClInclude>
+    <ClInclude Include="SysConfigWizardStep2.h">
+      <Filter>头文件\SysConfigWizard</Filter>
+    </ClInclude>
+    <ClInclude Include="SysConfigWizardStep3.h">
+      <Filter>头文件\SysConfigWizard</Filter>
+    </ClInclude>
+    <ClInclude Include="SysConfigWizardStep4.h">
+      <Filter>头文件\SysConfigWizard</Filter>
+    </ClInclude>
+    <ClInclude Include="SysConfigWizardStep5.h">
+      <Filter>头文件\SysConfigWizard</Filter>
+    </ClInclude>
+    <ClInclude Include="SysConfigWizardStep6.h">
+      <Filter>头文件\SysConfigWizard</Filter>
+    </ClInclude>
+    <ClInclude Include="TabCarrier.h">
+      <Filter>头文件\TabPages</Filter>
+    </ClInclude>
+    <ClInclude Include="TabInstrument.h">
+      <Filter>头文件\TabPages</Filter>
+    </ClInclude>
+    <ClInclude Include="TabParent.h">
+      <Filter>头文件\TabPages</Filter>
+    </ClInclude>
+    <ClInclude Include="TabProtocolConfig.h">
+      <Filter>头文件\TabPages</Filter>
+    </ClInclude>
+    <ClInclude Include="C.h">
+      <Filter>头文件\GraphRelated</Filter>
+    </ClInclude>
+    <ClInclude Include="W.h">
+      <Filter>头文件\GraphRelated</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphCCDF.h">
+      <Filter>头文件\GraphRelated</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphWAVE.h">
+      <Filter>头文件\GraphRelated</Filter>
+    </ClInclude>
+    <ClInclude Include="Splash.h">
+      <Filter>头文件\Splash</Filter>
+    </ClInclude>
+    <ClInclude Include="BlueToothParams.h">
+      <Filter>头文件\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="BlueToothProtocal.h">
+      <Filter>头文件\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml\rapidxml.hpp">
+      <Filter>头文件\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml\rapidxml_iterators.hpp">
+      <Filter>头文件\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml\rapidxml_print.hpp">
+      <Filter>头文件\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml\rapidxml_utils.hpp">
+      <Filter>头文件\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="SysConfigWizardStep3ViewDetail.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="func.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="visa.h">
+      <Filter>头文件\Visa</Filter>
+    </ClInclude>
+    <ClInclude Include="visatype.h">
+      <Filter>头文件\Visa</Filter>
+    </ClInclude>
+    <ClInclude Include="genParam.h">
+      <Filter>头文件\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="channel.h">
+      <Filter>头文件\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Framediag.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MacDiag.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MacConfig_SC.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MacConfig_HSI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SignalSource.h">
+      <Filter>头文件\Protocol</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="eiTemplate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="eiTemplateDoc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="eiTemplateView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MySplitterWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SysConfigWizard.cpp">
+      <Filter>源文件\SysConfigWizard</Filter>
+    </ClCompile>
+    <ClCompile Include="SysConfigWizardStep1.cpp">
+      <Filter>源文件\SysConfigWizard</Filter>
+    </ClCompile>
+    <ClCompile Include="SysConfigWizardStep2.cpp">
+      <Filter>源文件\SysConfigWizard</Filter>
+    </ClCompile>
+    <ClCompile Include="SysConfigWizardStep3.cpp">
+      <Filter>源文件\SysConfigWizard</Filter>
+    </ClCompile>
+    <ClCompile Include="SysConfigWizardStep4.cpp">
+      <Filter>源文件\SysConfigWizard</Filter>
+    </ClCompile>
+    <ClCompile Include="SysConfigWizardStep5.cpp">
+      <Filter>源文件\SysConfigWizard</Filter>
+    </ClCompile>
+    <ClCompile Include="SysConfigWizardStep6.cpp">
+      <Filter>源文件\SysConfigWizard</Filter>
+    </ClCompile>
+    <ClCompile Include="TabCarrier.cpp">
+      <Filter>源文件\TabPages</Filter>
+    </ClCompile>
+    <ClCompile Include="TabInstrument.cpp">
+      <Filter>源文件\TabPages</Filter>
+    </ClCompile>
+    <ClCompile Include="TabParent.cpp">
+      <Filter>源文件\TabPages</Filter>
+    </ClCompile>
+    <ClCompile Include="TabProtocolConfig.cpp">
+      <Filter>源文件\TabPages</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphCCDF.cpp">
+      <Filter>源文件\GraphRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphWAVE.cpp">
+      <Filter>源文件\GraphRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="C.cpp">
+      <Filter>源文件\GraphRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="W.cpp">
+      <Filter>源文件\GraphRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="Splash.cpp">
+      <Filter>源文件\Splash</Filter>
+    </ClCompile>
+    <ClCompile Include="BlueToothProtocal.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="SysConfigWizardStep3ViewDetail.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="func.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AV_conencoder.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="AV_HCS_encoder.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="AV_inner_interleaver.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="AV_multiplexer.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="AV_OFDMer.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="AV_outer_interleaver.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="AV_RSencoder.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="AV_splitter.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="AV_tx_modulation.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="bi2de_rs.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="bits2nums.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="conencoder.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="de2bi_rs.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="gen_prbs.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="genAV.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="genHSI.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="genLDPCGenMatrix.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="genLDPCparity.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="genSC.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="HCS_encoder.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="hex2binary.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="HSI_FECencoder.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="HSI_genPreamble.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="HSI_interleaver.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="HSI_LDPCencoder.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="HSI_OFDMer.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="HSI_OFDMer_header.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="HSI_scrambler.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="HSI_spreader.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="HSI_toneinter.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="HSI_tx_modulation.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="ifft_fft.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="mod.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="num2bits.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="rotateZ.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="RS_encoder.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="RS_encoder_shortened.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_BPSK.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_FECencoder.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_genPreamble.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_LFSR.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_PCESinserter.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_spreader.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_subbuilder.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_tx_modulation.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="scrambler.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="scrambler_gen_prbs.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="waveform_generator_3c.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="channel.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Framediag.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MacDiag.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MacConfig_SC.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MacConfig_HSI.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SignalSource.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Ceil.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="scrambler_gen_prbs_LRP.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="scrambler_LRP.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="stuffBits_SC.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="stuffBits_HSI.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="AV_genPreamble_HRP.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="stuffbits_HRP.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="AV_conencoder_Header.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="AV_multiplexer_Header.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="AV_genPreamble_LRP.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="AV_SCS_encoder.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="genAV_LRP.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="AV_OFDMer_LRP.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="AV_genHeader_LRP.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="AV_tx_modulation_LRP.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="eiTemplate.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<InstrumentsConfigs>
+	<InstrumentsInfo>
+		<ConfigName>测试选项</ConfigName>
+		<ConfigDesc>单天线配置下的仪器连接清单</ConfigDesc>
+	</InstrumentsInfo>
+	<Instrument>
+		<InstrumentType>MXG Signal Generator</InstrumentType>
+		<Connection>TCPIP0::127.0.0.1::INSTR</Connection>
+		<ModelNumber>Not available</ModelNumber>
+		<SerialNumber>Not available</SerialNumber>
+		<FirmwareRevision>Not available</FirmwareRevision>
+	</Instrument>
+	<Instrument>
+		<InstrumentType>ei41 Signal Generator</InstrumentType>
+		<Connection>TCPIP0::10.108.0.111::INSTR</Connection>
+		<ModelNumber>12345</ModelNumber>
+		<SerialNumber>67890</SerialNumber>
+		<FirmwareRevision>v_1.0</FirmwareRevision>
+	</Instrument>
+	<Instrument>
+		<InstrumentType>ei41 Signal Generator</InstrumentType>
+		<Connection>TCPIP0::10.108.0.111::INSTR</Connection>
+		<ModelNumber>12345</ModelNumber>
+		<SerialNumber>67890</SerialNumber>
+		<FirmwareRevision>v_1.0</FirmwareRevision>
+	</Instrument>
+</InstrumentsConfigs>
+

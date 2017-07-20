@@ -1,0 +1,541 @@
+﻿生成启动时间为 2017/7/20 11:35:50。
+     1>项目“C:\Users\Kyzx\Desktop\IEEE_802.15.3c_v3.4.8\IEEE_802.15.3c_v3.4.7\eiTemplate\eiTemplate.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“Debug\eiTemplate.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“Debug\eiTemplate.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\eiTemplate.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\bluetoothparams.h(66): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(188) : 参见“strncpy”的声明
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\bluetoothparams.h(67): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(188) : 参见“strncpy”的声明
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\bluetoothparams.h(68): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(188) : 参见“strncpy”的声明
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\bluetoothparams.h(69): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(188) : 参见“strncpy”的声明
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\eiTemplate.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt AV_conencoder.cpp AV_conencoder_Header.cpp AV_genHeader_LRP.cpp AV_genPreamble_HRP.cpp AV_genPreamble_LRP.cpp AV_HCS_encoder.cpp AV_inner_interleaver.cpp AV_multiplexer.cpp AV_multiplexer_Header.cpp AV_OFDMer.cpp AV_OFDMer_LRP.cpp AV_outer_interleaver.cpp AV_RSencoder.cpp AV_SCS_encoder.cpp AV_splitter.cpp AV_tx_modulation.cpp AV_tx_modulation_LRP.cpp bi2de_rs.cpp bits2nums.cpp BlueToothProtocal.cpp C.cpp Ceil.cpp channel.cpp conencoder.cpp de2bi_rs.cpp eiTemplate.cpp eiTemplateDoc.cpp eiTemplateView.cpp Framediag.cpp func.cpp genAV.cpp genAV_LRP.cpp genHSI.cpp genLDPCGenMatrix.cpp genLDPCparity.cpp genSC.cpp gen_prbs.cpp GraphCCDF.cpp GraphWAVE.cpp HCS_encoder.cpp hex2binary.cpp HSI_FECencoder.cpp HSI_genPreamble.cpp HSI_interleaver.cpp HSI_LDPCencoder.cpp HSI_OFDMer.cpp HSI_OFDMer_header.cpp HSI_scrambler.cpp HSI_spreader.cpp HSI_toneinter.cpp HSI_tx_modulation.cpp ifft_fft.cpp MacConfig_HSI.cpp MacConfig_SC.cpp MacDiag.cpp MainFrm.cpp mod.cpp MySplitterWnd.cpp num2bits.cpp rotateZ.cpp RS_encoder.cpp RS_encoder_shortened.cpp scrambler.cpp scrambler_gen_prbs.cpp scrambler_gen_prbs_LRP.cpp scrambler_LRP.cpp SC_BPSK.cpp SC_FECencoder.cpp SC_genPreamble.cpp SC_LFSR.cpp SC_PCESinserter.cpp SC_spreader.cpp SC_subbuilder.cpp SC_tx_modulation.cpp SignalSource.cpp Splash.cpp stuffbits_HRP.cpp stuffBits_HSI.cpp stuffBits_SC.cpp SysConfigWizard.cpp SysConfigWizardStep1.cpp SysConfigWizardStep2.cpp SysConfigWizardStep3.cpp SysConfigWizardStep3ViewDetail.cpp SysConfigWizardStep4.cpp SysConfigWizardStep5.cpp SysConfigWizardStep6.cpp TabCarrier.cpp TabInstrument.cpp TabParent.cpp TabProtocolConfig.cpp W.cpp waveform_generator_3c.cpp
+         waveform_generator_3c.cpp
+         W.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(140): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(153): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(154): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(163): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(164): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(172): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(173): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(210): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(211): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(231): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(232): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(275): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(276): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(289): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(290): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(342): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(350): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(380): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(387): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(440): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(441): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(444): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(445): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(446): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(461): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(463): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(464): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(550): warning C4244: “=”: 从“double”转换到“LONG”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(551): warning C4244: “=”: 从“double”转换到“LONG”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(573): warning C4244: “=”: 从“double”转换到“LONG”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(574): warning C4244: “=”: 从“double”转换到“LONG”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(597): warning C4244: “=”: 从“double”转换到“LONG”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(598): warning C4244: “=”: 从“double”转换到“LONG”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(611): warning C4244: “=”: 从“double”转换到“LONG”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(612): warning C4244: “=”: 从“double”转换到“LONG”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(629): warning C4244: “=”: 从“double”转换到“LONG”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(630): warning C4244: “=”: 从“double”转换到“LONG”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(646): warning C4244: “=”: 从“double”转换到“LONG”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\w.cpp(647): warning C4244: “=”: 从“double”转换到“LONG”，可能丢失数据
+         TabProtocolConfig.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\tabprotocolconfig.cpp(1030): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+         TabParent.cpp
+         TabInstrument.cpp
+         TabCarrier.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\tabcarrier.cpp(298): warning C4129: “Q”: 不可识别的字符转义序列
+         SysConfigWizardStep6.cpp
+         SysConfigWizardStep5.cpp
+         SysConfigWizardStep4.cpp
+         SysConfigWizardStep3ViewDetail.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\rapidxml\rapidxml_utils.hpp(40): warning C4244: “初始化”: 从“std::streamoff”转换到“size_t”，可能丢失数据
+                 c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\rapidxml\rapidxml_utils.hpp(28): 编译类 模板 成员函数“rapidxml::file<>::file(const char *)”时
+                 c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sysconfigwizardstep3viewdetail.cpp(86): 参见对正在编译的类 模板 实例化“rapidxml::file<>”的引用
+         SysConfigWizardStep3.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\rapidxml\rapidxml_utils.hpp(40): warning C4244: “初始化”: 从“std::streamoff”转换到“size_t”，可能丢失数据
+                 c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\rapidxml\rapidxml_utils.hpp(28): 编译类 模板 成员函数“rapidxml::file<>::file(const char *)”时
+                 c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sysconfigwizardstep3.cpp(107): 参见对正在编译的类 模板 实例化“rapidxml::file<>”的引用
+         SysConfigWizardStep2.cpp
+         SysConfigWizardStep1.cpp
+         SysConfigWizard.cpp
+         stuffBits_SC.cpp
+         stuffBits_HSI.cpp
+         stuffbits_HRP.cpp
+         Splash.cpp
+         SignalSource.cpp
+         SC_tx_modulation.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_tx_modulation.cpp(19): warning C4101: “nums_temp”: 未引用的局部变量
+         正在生成代码...
+         正在编译...
+         SC_subbuilder.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_subbuilder.cpp(37): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_subbuilder.cpp(39): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_subbuilder.cpp(44): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_subbuilder.cpp(162): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_subbuilder.cpp(164): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_subbuilder.cpp(169): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+         SC_spreader.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_spreader.cpp(18): warning C4018: “<”: 有符号/无符号不匹配
+         SC_PCESinserter.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_pcesinserter.cpp(33): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_pcesinserter.cpp(64): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_pcesinserter.cpp(91): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_pcesinserter.cpp(118): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+         SC_LFSR.cpp
+         SC_genPreamble.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_genpreamble.cpp(21): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_genpreamble.cpp(24): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_genpreamble.cpp(75): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_genpreamble.cpp(77): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_genpreamble.cpp(79): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_genpreamble.cpp(120): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_genpreamble.cpp(122): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_genpreamble.cpp(124): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_genpreamble.cpp(175): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_genpreamble.cpp(177): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\sc_genpreamble.cpp(179): warning C4018: “<”: 有符号/无符号不匹配
+         SC_FECencoder.cpp
+         SC_BPSK.cpp
+         scrambler_LRP.cpp
+         scrambler_gen_prbs_LRP.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\scrambler_gen_prbs_lrp.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         scrambler_gen_prbs.cpp
+         scrambler.cpp
+         RS_encoder_shortened.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\rs_encoder_shortened.cpp(15): warning C4018: “<”: 有符号/无符号不匹配
+         RS_encoder.cpp
+         rotateZ.cpp
+         num2bits.cpp
+         MySplitterWnd.cpp
+         mod.cpp
+         MainFrm.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\mainfrm.cpp(658): warning C4244: “=”: 从“double”转换到“LONG”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\mainfrm.cpp(697): warning C4244: “=”: 从“double”转换到“LONG”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\mainfrm.cpp(714): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\mainfrm.cpp(475): warning C4101: “n”: 未引用的局部变量
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\mainfrm.cpp(1128): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+         MacDiag.cpp
+         MacConfig_SC.cpp
+         正在生成代码...
+         正在编译...
+         MacConfig_HSI.cpp
+         ifft_fft.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\ifft_fft.cpp(43): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\ifft_fft.cpp(99): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+         HSI_tx_modulation.cpp
+         HSI_toneinter.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hsi_toneinter.cpp(14): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hsi_toneinter.cpp(29): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+         HSI_spreader.cpp
+         HSI_scrambler.cpp
+         HSI_OFDMer_header.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hsi_ofdmer_header.cpp(12): warning C4244: “初始化”: 从“double”转换到“const int”，可能丢失数据
+         HSI_OFDMer.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hsi_ofdmer.cpp(12): warning C4244: “初始化”: 从“double”转换到“const int”，可能丢失数据
+         HSI_LDPCencoder.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hsi_ldpcencoder.cpp(31): warning C4244: “参数”: 从“double”转换到“const int”，可能丢失数据
+         HSI_interleaver.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hsi_interleaver.cpp(16): warning C4018: “<”: 有符号/无符号不匹配
+         HSI_genPreamble.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hsi_genpreamble.cpp(23): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hsi_genpreamble.cpp(26): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hsi_genpreamble.cpp(77): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hsi_genpreamble.cpp(79): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hsi_genpreamble.cpp(81): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hsi_genpreamble.cpp(148): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hsi_genpreamble.cpp(150): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hsi_genpreamble.cpp(152): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hsi_genpreamble.cpp(235): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hsi_genpreamble.cpp(237): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hsi_genpreamble.cpp(239): warning C4018: “<”: 有符号/无符号不匹配
+         HSI_FECencoder.cpp
+         hex2binary.cpp
+         HCS_encoder.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\hcs_encoder.cpp(12): warning C4018: “<”: 有符号/无符号不匹配
+         GraphWAVE.cpp
+         GraphCCDF.cpp
+         gen_prbs.cpp
+         genSC.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\gensc.cpp(26): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\gensc.cpp(69): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\gensc.cpp(71): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\gensc.cpp(75): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\gensc.cpp(77): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\gensc.cpp(83): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\gensc.cpp(85): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\gensc.cpp(92): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\gensc.cpp(103): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\gensc.cpp(125): warning C4018: “<”: 有符号/无符号不匹配
+         genLDPCparity.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\genldpcparity.cpp(11): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\genldpcparity.cpp(13): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\genldpcparity.cpp(18): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\genldpcparity.cpp(22): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+         genLDPCGenMatrix.cpp
+         正在生成代码...
+         正在编译...
+         genHSI.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\genhsi.cpp(31): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\genhsi.cpp(98): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\genhsi.cpp(125): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\genhsi.cpp(126): warning C4018: “<”: 有符号/无符号不匹配
+         genAV_LRP.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\genav_lrp.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\genav_lrp.cpp(10): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\genav_lrp.cpp(15): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\genav_lrp.cpp(20): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\genav_lrp.cpp(33): warning C4018: “<”: 有符号/无符号不匹配
+         genAV.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\genav.cpp(15): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\genav.cpp(32): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\genav.cpp(68): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\genav.cpp(111): warning C4018: “<”: 有符号/无符号不匹配
+         func.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\func.cpp(19): warning C4101: “DataMax”: 未引用的局部变量
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\func.cpp(124): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+         Framediag.cpp
+         eiTemplateView.cpp
+         eiTemplateDoc.cpp
+         eiTemplate.cpp
+         de2bi_rs.cpp
+         conencoder.cpp
+         channel.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(56): warning C4101: “i”: 未引用的局部变量
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(250): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(273): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(289): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(308): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(331): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(347): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(367): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(383): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(877): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(883): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1003): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1008): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1014): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1019): warning C4244: “参数”: 从“double”转换到“const int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1037): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1050): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1055): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1100): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1121): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1126): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1132): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1151): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(868): warning C4101: “beta0”: 未引用的局部变量
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(868): warning C4101: “beta0m”: 未引用的局部变量
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1198): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1199): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1205): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1214): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1222): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1280): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1282): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1286): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1292): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1306): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1311): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1347): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1352): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1383): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1406): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1424): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1425): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1426): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1429): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1437): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1438): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1439): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1458): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1465): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1484): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1503): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1505): warning C4244: “参数”: 从“double”转换到“const std::complex<float>::_Ty”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1506): warning C4244: “参数”: 从“double”转换到“const std::complex<float>::_Ty”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(1447): warning C4101: “N”: 未引用的局部变量
+         Ceil.cpp
+         C.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\c.cpp(87): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\c.cpp(114): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\c.cpp(115): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\c.cpp(123): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\c.cpp(124): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\c.cpp(131): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\c.cpp(144): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\c.cpp(145): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\c.cpp(199): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\c.cpp(229): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\c.cpp(265): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\c.cpp(266): warning C4244: “=”: 从“double”转换到“LONG”，可能丢失数据
+         BlueToothProtocal.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\bluetoothprotocal.cpp(1637): warning C4244: “初始化”: 从“double”转换到“long”，可能丢失数据
+         bits2nums.cpp
+         bi2de_rs.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\bi2de_rs.cpp(14): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+         AV_tx_modulation_LRP.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\av_tx_modulation_lrp.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\av_tx_modulation_lrp.cpp(14): warning C4018: “<”: 有符号/无符号不匹配
+         AV_tx_modulation.cpp
+         AV_splitter.cpp
+         AV_SCS_encoder.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\av_scs_encoder.cpp(12): warning C4018: “<”: 有符号/无符号不匹配
+         正在生成代码...
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\channel.cpp(240): warning C4715: “tsv_poissrnd”: 不是所有的控件路径都返回值
+         正在编译...
+         AV_RSencoder.cpp
+         AV_outer_interleaver.cpp
+         AV_OFDMer_LRP.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\av_ofdmer_lrp.cpp(28): warning C4018: “<”: 有符号/无符号不匹配
+         AV_OFDMer.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\av_ofdmer.cpp(12): warning C4244: “初始化”: 从“double”转换到“const int”，可能丢失数据
+         AV_multiplexer_Header.cpp
+         AV_multiplexer.cpp
+         AV_inner_interleaver.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\av_inner_interleaver.cpp(18): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\av_inner_interleaver.cpp(22): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\av_inner_interleaver.cpp(34): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\av_inner_interleaver.cpp(63): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\av_inner_interleaver.cpp(77): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\av_inner_interleaver.cpp(81): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+         AV_HCS_encoder.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\av_hcs_encoder.cpp(11): warning C4018: “<”: 有符号/无符号不匹配
+         AV_genPreamble_LRP.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\av_genpreamble_lrp.cpp(20): warning C4018: “<”: 有符号/无符号不匹配
+         AV_genPreamble_HRP.cpp
+         AV_genHeader_LRP.cpp
+     1>c:\users\kyzx\desktop\ieee_802.15.3c_v3.4.8\ieee_802.15.3c_v3.4.7\eitemplate\av_genheader_lrp.cpp(19): warning C4018: “<”: 有符号/无符号不匹配
+         AV_conencoder_Header.cpp
+         AV_conencoder.cpp
+         正在生成代码...
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _DEBUG /D _AFXDLL /l"0x0804" /IDebug\ /nologo /fo"Debug\eiTemplate.res" eiTemplate.rc 
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\eiTemplate.exe.embed.manifest.res" Debug\eiTemplate_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Kyzx\Desktop\IEEE_802.15.3c_v3.4.8\IEEE_802.15.3c_v3.4.7\Debug\eiTemplate.exe" /INCREMENTAL /NOLOGO visa32.lib htmlhelp.lib /MANIFEST /ManifestFile:"Debug\eiTemplate.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Kyzx\Desktop\IEEE_802.15.3c_v3.4.8\IEEE_802.15.3c_v3.4.7\Debug\eiTemplate.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Kyzx\Desktop\IEEE_802.15.3c_v3.4.8\IEEE_802.15.3c_v3.4.7\Debug\eiTemplate.lib" /MACHINE:X86 Debug\eiTemplate.res
+         Debug\eiTemplate.exe.embed.manifest.res
+         Debug\AV_conencoder.obj
+         Debug\AV_conencoder_Header.obj
+         Debug\AV_genHeader_LRP.obj
+         Debug\AV_genPreamble_HRP.obj
+         Debug\AV_genPreamble_LRP.obj
+         Debug\AV_HCS_encoder.obj
+         Debug\AV_inner_interleaver.obj
+         Debug\AV_multiplexer.obj
+         Debug\AV_multiplexer_Header.obj
+         Debug\AV_OFDMer.obj
+         Debug\AV_OFDMer_LRP.obj
+         Debug\AV_outer_interleaver.obj
+         Debug\AV_RSencoder.obj
+         Debug\AV_SCS_encoder.obj
+         Debug\AV_splitter.obj
+         Debug\AV_tx_modulation.obj
+         Debug\AV_tx_modulation_LRP.obj
+         Debug\bi2de_rs.obj
+         Debug\bits2nums.obj
+         Debug\BlueToothProtocal.obj
+         Debug\C.obj
+         Debug\Ceil.obj
+         Debug\channel.obj
+         Debug\conencoder.obj
+         Debug\de2bi_rs.obj
+         Debug\eiTemplate.obj
+         Debug\eiTemplateDoc.obj
+         Debug\eiTemplateView.obj
+         Debug\Framediag.obj
+         Debug\func.obj
+         Debug\genAV.obj
+         Debug\genAV_LRP.obj
+         Debug\genHSI.obj
+         Debug\genLDPCGenMatrix.obj
+         Debug\genLDPCparity.obj
+         Debug\genSC.obj
+         Debug\gen_prbs.obj
+         Debug\GraphCCDF.obj
+         Debug\GraphWAVE.obj
+         Debug\HCS_encoder.obj
+         Debug\hex2binary.obj
+         Debug\HSI_FECencoder.obj
+         Debug\HSI_genPreamble.obj
+         Debug\HSI_interleaver.obj
+         Debug\HSI_LDPCencoder.obj
+         Debug\HSI_OFDMer.obj
+         Debug\HSI_OFDMer_header.obj
+         Debug\HSI_scrambler.obj
+         Debug\HSI_spreader.obj
+         Debug\HSI_toneinter.obj
+         Debug\HSI_tx_modulation.obj
+         Debug\ifft_fft.obj
+         Debug\MacConfig_HSI.obj
+         Debug\MacConfig_SC.obj
+         Debug\MacDiag.obj
+         Debug\MainFrm.obj
+         Debug\mod.obj
+         Debug\MySplitterWnd.obj
+         Debug\num2bits.obj
+         Debug\rotateZ.obj
+         Debug\RS_encoder.obj
+         Debug\RS_encoder_shortened.obj
+         Debug\scrambler.obj
+         Debug\scrambler_gen_prbs.obj
+         Debug\scrambler_gen_prbs_LRP.obj
+         Debug\scrambler_LRP.obj
+         Debug\SC_BPSK.obj
+         Debug\SC_FECencoder.obj
+         Debug\SC_genPreamble.obj
+         Debug\SC_LFSR.obj
+         Debug\SC_PCESinserter.obj
+         Debug\SC_spreader.obj
+         Debug\SC_subbuilder.obj
+         Debug\SC_tx_modulation.obj
+         Debug\SignalSource.obj
+         Debug\Splash.obj
+         Debug\stdafx.obj
+         Debug\stuffbits_HRP.obj
+         Debug\stuffBits_HSI.obj
+         Debug\stuffBits_SC.obj
+         Debug\SysConfigWizard.obj
+         Debug\SysConfigWizardStep1.obj
+         Debug\SysConfigWizardStep2.obj
+         Debug\SysConfigWizardStep3.obj
+         Debug\SysConfigWizardStep3ViewDetail.obj
+         Debug\SysConfigWizardStep4.obj
+         Debug\SysConfigWizardStep5.obj
+         Debug\SysConfigWizardStep6.obj
+         Debug\TabCarrier.obj
+         Debug\TabInstrument.obj
+         Debug\TabParent.obj
+         Debug\TabProtocolConfig.obj
+         Debug\W.obj
+         Debug\waveform_generator_3c.obj
+       Manifest:
+         正在删除文件“Debug\eiTemplate.exe.embed.manifest”。
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\eiTemplate.exe.embed.manifest" /manifest Debug\eiTemplate.exe.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\eiTemplate.exe.embed.manifest.res" Debug\eiTemplate_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Kyzx\Desktop\IEEE_802.15.3c_v3.4.8\IEEE_802.15.3c_v3.4.7\Debug\eiTemplate.exe" /INCREMENTAL /NOLOGO visa32.lib htmlhelp.lib /MANIFEST /ManifestFile:"Debug\eiTemplate.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Kyzx\Desktop\IEEE_802.15.3c_v3.4.8\IEEE_802.15.3c_v3.4.7\Debug\eiTemplate.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Kyzx\Desktop\IEEE_802.15.3c_v3.4.8\IEEE_802.15.3c_v3.4.7\Debug\eiTemplate.lib" /MACHINE:X86 Debug\eiTemplate.res
+         Debug\eiTemplate.exe.embed.manifest.res
+         Debug\AV_conencoder.obj
+         Debug\AV_conencoder_Header.obj
+         Debug\AV_genHeader_LRP.obj
+         Debug\AV_genPreamble_HRP.obj
+         Debug\AV_genPreamble_LRP.obj
+         Debug\AV_HCS_encoder.obj
+         Debug\AV_inner_interleaver.obj
+         Debug\AV_multiplexer.obj
+         Debug\AV_multiplexer_Header.obj
+         Debug\AV_OFDMer.obj
+         Debug\AV_OFDMer_LRP.obj
+         Debug\AV_outer_interleaver.obj
+         Debug\AV_RSencoder.obj
+         Debug\AV_SCS_encoder.obj
+         Debug\AV_splitter.obj
+         Debug\AV_tx_modulation.obj
+         Debug\AV_tx_modulation_LRP.obj
+         Debug\bi2de_rs.obj
+         Debug\bits2nums.obj
+         Debug\BlueToothProtocal.obj
+         Debug\C.obj
+         Debug\Ceil.obj
+         Debug\channel.obj
+         Debug\conencoder.obj
+         Debug\de2bi_rs.obj
+         Debug\eiTemplate.obj
+         Debug\eiTemplateDoc.obj
+         Debug\eiTemplateView.obj
+         Debug\Framediag.obj
+         Debug\func.obj
+         Debug\genAV.obj
+         Debug\genAV_LRP.obj
+         Debug\genHSI.obj
+         Debug\genLDPCGenMatrix.obj
+         Debug\genLDPCparity.obj
+         Debug\genSC.obj
+         Debug\gen_prbs.obj
+         Debug\GraphCCDF.obj
+         Debug\GraphWAVE.obj
+         Debug\HCS_encoder.obj
+         Debug\hex2binary.obj
+         Debug\HSI_FECencoder.obj
+         Debug\HSI_genPreamble.obj
+         Debug\HSI_interleaver.obj
+         Debug\HSI_LDPCencoder.obj
+         Debug\HSI_OFDMer.obj
+         Debug\HSI_OFDMer_header.obj
+         Debug\HSI_scrambler.obj
+         Debug\HSI_spreader.obj
+         Debug\HSI_toneinter.obj
+         Debug\HSI_tx_modulation.obj
+         Debug\ifft_fft.obj
+         Debug\MacConfig_HSI.obj
+         Debug\MacConfig_SC.obj
+         Debug\MacDiag.obj
+         Debug\MainFrm.obj
+         Debug\mod.obj
+         Debug\MySplitterWnd.obj
+         Debug\num2bits.obj
+         Debug\rotateZ.obj
+         Debug\RS_encoder.obj
+         Debug\RS_encoder_shortened.obj
+         Debug\scrambler.obj
+         Debug\scrambler_gen_prbs.obj
+         Debug\scrambler_gen_prbs_LRP.obj
+         Debug\scrambler_LRP.obj
+         Debug\SC_BPSK.obj
+         Debug\SC_FECencoder.obj
+         Debug\SC_genPreamble.obj
+         Debug\SC_LFSR.obj
+         Debug\SC_PCESinserter.obj
+         Debug\SC_spreader.obj
+         Debug\SC_subbuilder.obj
+         Debug\SC_tx_modulation.obj
+         Debug\SignalSource.obj
+         Debug\Splash.obj
+         Debug\stdafx.obj
+         Debug\stuffbits_HRP.obj
+         Debug\stuffBits_HSI.obj
+         Debug\stuffBits_SC.obj
+         Debug\SysConfigWizard.obj
+         Debug\SysConfigWizardStep1.obj
+         Debug\SysConfigWizardStep2.obj
+         Debug\SysConfigWizardStep3.obj
+         Debug\SysConfigWizardStep3ViewDetail.obj
+         Debug\SysConfigWizardStep4.obj
+         Debug\SysConfigWizardStep5.obj
+         Debug\SysConfigWizardStep6.obj
+         Debug\TabCarrier.obj
+         Debug\TabInstrument.obj
+         Debug\TabParent.obj
+         Debug\TabProtocolConfig.obj
+         Debug\W.obj
+         Debug\waveform_generator_3c.obj
+         eiTemplate.vcxproj -> C:\Users\Kyzx\Desktop\IEEE_802.15.3c_v3.4.8\IEEE_802.15.3c_v3.4.7\Debug\eiTemplate.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\eiTemplate.unsuccessfulbuild”。
+         正在对“Debug\eiTemplate.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“C:\Users\Kyzx\Desktop\IEEE_802.15.3c_v3.4.8\IEEE_802.15.3c_v3.4.7\eiTemplate\eiTemplate.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:13.72
