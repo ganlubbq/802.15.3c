@@ -280,6 +280,8 @@ LRESULT CTabCarrier::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lparam)
 	case CARRI_QUADRATURE_ANGLE_ADJUST:
 		str.Remove(' ');//移除空格
 		match_result = regex_match(str.GetBuffer(),patten_quad_deg_ad);//正则验证
+		double temp_deg;
+		temp_deg=p_3c_params->quan_angle_adjust;
 		if (match_result)
 		{
 			double quad_angle_ad = atof(str);
@@ -288,17 +290,22 @@ LRESULT CTabCarrier::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lparam)
 			else if (quad_angle_ad < -90)
 				quad_angle_ad = -90;
 			p_3c_params->quan_angle_adjust = quad_angle_ad;
-			str_temp.Format("%f Deg", quad_angle_ad);
+			str_temp.Format(_T("%.2lf Deg"), quad_angle_ad);
 			pProp->SetValue(str_temp);
 		}
 		else
 		{
 			MessageBox("正交角度设置有误！");
+			str_temp.Format(_T("%.2lf Deg"), temp_deg);
+ 			pProp->SetValue(str_temp);
+// // 			
 		}
 		break;
 	case CARRI_IQ_BALANCE_GAIN:
 		str.Remove(' ');//移除空格
 		match_result = regex_match(str.GetBuffer(),patten_iqgainbalance);//正则验证
+		double temp_db;
+		temp_db=p_3c_params->IQ_gain;
 		if (match_result)
 		{
 			double IQ_gain = atof(str);
@@ -307,12 +314,14 @@ LRESULT CTabCarrier::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lparam)
 			else if (IQ_gain < -10)
 				IQ_gain = -10;
 			p_3c_params->IQ_gain = IQ_gain;
-			str_temp.Format("%f dB", IQ_gain);
+			str_temp.Format(_T("%.2lf dB"), IQ_gain);
 			pProp->SetValue(str_temp);
 		}
 		else
 		{
 			MessageBox("I\Q平衡增益设置有误！");
+ 			str_temp.Format(_T("%.2lf dB"), temp_db);
+ 			pProp->SetValue(str_temp);
 		}
 		break;
 	default:

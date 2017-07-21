@@ -101,8 +101,8 @@ BOOL CTabProtocolConfig::OnInitDialog()
 	CMFCPropertyGridProperty* pCarrier_frames = new CMFCPropertyGridProperty(_T("信号帧数"),_T("1"),_T("输入所需生成信号的帧数"));
 	pGroup_carrier->AddSubItem(pCarrier_frames);
 	pGroup_carrier->AllowEdit(FALSE);
-	pCarrier_data_length = new CMFCPropertyGridProperty(_T("数据长度"),_T("123456"),_T("输入所需生成信号数据长度"), PROTO_SIG_GENLENGTH_3C);
-	pGroup_carrier->AddSubItem(pCarrier_data_length);
+// 	pCarrier_data_length = new CMFCPropertyGridProperty(_T("数据长度"),_T("123456"),_T("输入所需生成信号数据长度"), PROTO_SIG_GENLENGTH_3C);
+// 	pGroup_carrier->AddSubItem(pCarrier_data_length);
 	CMFCPropertyGridProperty* pCarrier_freq_offset = new CMFCPropertyGridProperty(_T("频率偏移"),_T("10000.0000Hz"),_T("显示当前频率偏移值"));
 	pCarrier_freq_offset->AllowEdit(FALSE);
 	pGroup_carrier->AddSubItem(pCarrier_freq_offset);
