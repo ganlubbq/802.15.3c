@@ -271,10 +271,13 @@ BOOL CTabInstrument::OnInitDialog()
 	p_group_RT_Noise->AddSubItem(p_rt_noise_state);
 	p_carrier_to_noise_ratio = new CMFCPropertyGridProperty("载波信噪比","20.00 dB","设置信噪比",INSTR_CARRIER_TO_NOISE_RATIO);
 	p_group_RT_Noise->AddSubItem(p_carrier_to_noise_ratio);
+	p_carrier_to_noise_ratio->Enable(FALSE);
 	p_carrier_bandwidth = new CMFCPropertyGridProperty("载波带宽","20.00 Mhz","设置载波的带宽",INSTR_CARRIER_BANDWIDTH);
 	p_group_RT_Noise->AddSubItem(p_carrier_bandwidth);
+	p_carrier_bandwidth->Enable(FALSE);
 	p_noise_bandwidth = new CMFCPropertyGridProperty("噪声带宽","20.00 Mhz","设置噪声的带宽",INSTR_NOISE_BANDWIDTH);
 	p_group_RT_Noise->AddSubItem(p_noise_bandwidth);
+	p_noise_bandwidth->Enable(FALSE);
 
 	//p_group_RT_Noise->Expand(FALSE);
 
@@ -982,6 +985,18 @@ LRESULT CTabInstrument::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lparam)
 		break;
 	case INSTR_RT_NOISE:
 		str_temp.Remove(' ');
+		if (str_temp=="ON")
+		{
+			p_carrier_to_noise_ratio->Enable(TRUE);
+			p_carrier_bandwidth->Enable(TRUE);
+			p_noise_bandwidth->Enable(TRUE);
+		}
+		if (str_temp=="OFF")
+		{
+			p_carrier_to_noise_ratio->Enable(FALSE);
+			p_carrier_bandwidth->Enable(FALSE);
+			p_noise_bandwidth->Enable(FALSE);
+		}
 		if (send_command_enabled)
 		{
 			if (str_temp == "OFF")

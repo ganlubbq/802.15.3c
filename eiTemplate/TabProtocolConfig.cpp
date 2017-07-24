@@ -257,6 +257,7 @@ BOOL CTabProtocolConfig::OnInitDialog()
 	pChannel_switch->AllowEdit(FALSE);
 	pGroup_channel->AddSubItem(pChannel_switch);
 	pChannel_type = new CMFCPropertyGridProperty(_T("信道类型"),_T("11"),_T("设置信道类型"),PROTO_CHAN_TYPE);
+	pChannel_type->Enable(FALSE);
 	pChannel_type->AddOption(_T("11"));
 	pChannel_type->AddOption(_T("12"));
 	pChannel_type->AddOption(_T("13"));
@@ -281,12 +282,16 @@ BOOL CTabProtocolConfig::OnInitDialog()
 	pGroup_channel->AddSubItem(pChannel_type);
 	pChannel_sys_bw = new CMFCPropertyGridProperty(_T("系统带宽"),_T("2124.25MHz"),_T("设置系统带宽"),PROTO_CHAN_SYSBW);
 	pGroup_channel->AddSubItem(pChannel_sys_bw);
+	pChannel_sys_bw->Enable(FALSE);
 	CMFCPropertyGridProperty* pChannel_noise_bw = new CMFCPropertyGridProperty(_T("噪声带宽"),_T("12456Hz"),_T("设置噪声带宽"));
 	pGroup_channel->AddSubItem(pChannel_noise_bw);
+	pChannel_noise_bw->Enable(FALSE);
 	CMFCPropertyGridProperty* pChannel_nsys_ratio = new CMFCPropertyGridProperty(_T("最小噪声/系统带宽"),_T("12456Hz"),_T("计算最小噪声/系统带宽"));
 	pGroup_channel->AddSubItem(pChannel_nsys_ratio);
+	pChannel_nsys_ratio->Enable(FALSE);
 	CMFCPropertyGridProperty* pChannel_snr = new CMFCPropertyGridProperty(_T("Eb/NO"),_T("00dB"),_T("计算信噪比"));
 	pGroup_channel->AddSubItem(pChannel_snr);
+	pChannel_snr->Enable(FALSE);
 	
 
 	m_main_property.AddProperty(pGroup_carrier);
@@ -941,9 +946,18 @@ LRESULT CTabProtocolConfig::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lpa
 		}
 		case PROTO_CHAN_SWITCH:
 				if (str.Compare("OFF") == 0)
+				{
 					p_channel_params->chanel_switch = 0;
+					pChannel_type->Enable(FALSE);
+					pChannel_sys_bw->Enable(FALSE);
+				}
+
 				else
+				{
 					p_channel_params->chanel_switch = 1;
+					pChannel_type->Enable(TRUE);
+					pChannel_sys_bw->Enable(TRUE);
+				}
 			break;
 		
 		case PROTO_CHAN_TYPE:
