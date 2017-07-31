@@ -324,7 +324,8 @@ void CMainFrame::OnHelpDoc()//打开帮助文档
 	/*方法，这样会使帮助文档作为应用程序的一部分打开，应用程序关闭的时候帮助*/
 	/*随之关闭，体现了软件的专业性											*/
 	/************************************************************************/
-	::HtmlHelp(this->m_hWnd,"test.chm",HH_DISPLAY_TOPIC,NULL);
+	::HtmlHelp(this->m_hWnd,"16de_help.chm",HH_DISPLAY_TOPIC,NULL);
+	/*::HtmlHelp(this->m_hWnd,_T("16de_help.chm.chm"),HH_DISPLAY_TOPIC,NULL);*/
 }
 
 

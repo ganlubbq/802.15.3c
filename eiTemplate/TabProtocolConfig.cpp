@@ -98,9 +98,10 @@ BOOL CTabProtocolConfig::OnInitDialog()
 	pCarrier_sig_mode->AddOption(_T("AV"));
 	pCarrier_sig_mode->AllowEdit(FALSE);
 	pGroup_carrier->AddSubItem(pCarrier_sig_mode);
-	CMFCPropertyGridProperty* pCarrier_frames = new CMFCPropertyGridProperty(_T("信号帧数"),_T("1"),_T("输入所需生成信号的帧数"));
-	pGroup_carrier->AddSubItem(pCarrier_frames);
-	pGroup_carrier->AllowEdit(FALSE);
+// 	CMFCPropertyGridProperty* pCarrier_frames = new CMFCPropertyGridProperty(_T("信号帧数"),_T("1"),_T("输入所需生成信号的帧数"));
+// 	pGroup_carrier->AddSubItem(pCarrier_frames);
+// 	pGroup_carrier->AllowEdit(FALSE);
+// 	pGroup_carrier->Enable(FALSE);
 // 	pCarrier_data_length = new CMFCPropertyGridProperty(_T("数据长度"),_T("123456"),_T("输入所需生成信号数据长度"), PROTO_SIG_GENLENGTH_3C);
 // 	pGroup_carrier->AddSubItem(pCarrier_data_length);
 	CMFCPropertyGridProperty* pCarrier_freq_offset = new CMFCPropertyGridProperty(_T("频率偏移"),_T("10000.0000Hz"),_T("显示当前频率偏移值"));
@@ -332,7 +333,8 @@ LRESULT CTabProtocolConfig::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lpa
 	CTabCarrier &T_Carri = ((CTabParent*)(((CMainFrame*)AfxGetMainWnd())->m_mainSplitter.GetPane(0,0)))->m_tabCarrier;//跨页联动
 	str = pProp->GetValue();
 	int id_changed = pProp->GetData();//获取当前值发生变化的属性的ID
-
+	regex ssidcmp("^[01]{4}$",regex::icase);
+	bool match_results1=false;
 	/*******************153c界面参数传入*************************/
 	SetFocus();
 	switch (id_changed)
@@ -1066,13 +1068,36 @@ LRESULT CTabProtocolConfig::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lpa
 			break;
 		case PROTO_SIG_SSID_3C:
 			{
-				int ssid = 0;
-				for (int i = 0; i < 4; ++i)
-					ssid += pow(double(2), double(3 - i)) * (str.GetAt(i) - '0');
-				p_3c_params->SC_p.ssid = ssid;
-				p_3c_params->HSI_p.ssid = ssid;
-				p_3c_params->AV_p.ssid = ssid;
-				break;
+// 				match_results1=regex_match(str.GetBuffer(),ssidcmp);
+// 				double ssid_sc;
+// 				double ssid_hsi;
+// 				double ssid_av;
+// 				ssid_sc=p_3c_params->SC_p.ssid;
+// 				ssid_hsi=p_3c_params->HSI_p.ssid;
+// 				ssid_av=p_3c_params->AV_p.ssid;
+// 				if(match_results1)
+// 				{
+// 					int ssid = 0;
+// 					for (int i = 0; i < 4; ++i)
+// 						ssid += pow(double(2), double(3 - i)) * (str.GetAt(i) - '0');
+// 					p_3c_params->SC_p.ssid = ssid;
+// 					p_3c_params->HSI_p.ssid = ssid;
+// 					p_3c_params->AV_p.ssid = ssid;
+// 					break;
+// 				}
+// 				else
+// 				{
+// 					p_3c_params->SC_p.ssid = ssid_sc;
+// 					p_3c_params->HSI_p.ssid = ssid_hsi;
+// 					p_3c_params->AV_p.ssid = ssid_av;
+// 				}
+ 				int ssid = 0;
+ 				for (int i = 0; i < 4; ++i)
+ 					ssid += pow(double(2), double(3 - i)) * (str.GetAt(i) - '0');
+ 				p_3c_params->SC_p.ssid = ssid;
+ 				p_3c_params->HSI_p.ssid = ssid;
+ 				p_3c_params->AV_p.ssid = ssid;
+ 				break;
 			}
 	default:
 		break;
