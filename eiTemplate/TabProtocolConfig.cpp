@@ -187,7 +187,7 @@ BOOL CTabProtocolConfig::OnInitDialog()
 	pPayload_data_source->AddOption(_T("从文件读取"));
 	pPayload_data_source->AllowEdit(FALSE);
 	pGroup_payload->AddSubItem(pPayload_data_source);
-	pPayload_length = new CMFCPropertyGridProperty(_T("负载长度"),_T("30592"),_T("设置负载长度"), PROTO_SIG_PAYLOADLENGTH_3C);
+	pPayload_length = new CMFCPropertyGridProperty(_T("负载长度"),_T("3824"),_T("设置负载长度"), PROTO_SIG_PAYLOADLENGTH_3C);
 	pGroup_payload->AddSubItem(pPayload_length);
 	pPayload_trans_rate = new CMFCPropertyGridProperty(_T("传输速率模式"),_T("HRP"),_T("选择传输速率模式：HRP/LRP"), PROTO_SIG_TRANS_RATE_TYPE);
 	pPayload_trans_rate->AddOption(_T("HRP"));
@@ -281,18 +281,18 @@ BOOL CTabProtocolConfig::OnInitDialog()
 	pChannel_type->AddOption(_T("92"));
 	pChannel_type->AllowEdit(FALSE);
 	pGroup_channel->AddSubItem(pChannel_type);
-	pChannel_sys_bw = new CMFCPropertyGridProperty(_T("系统带宽"),_T("2124.25MHz"),_T("设置系统带宽"),PROTO_CHAN_SYSBW);
+	pChannel_sys_bw = new CMFCPropertyGridProperty(_T("系统带宽"),_T("60GHz"),_T("设置系统带宽"),PROTO_CHAN_SYSBW);
 	pGroup_channel->AddSubItem(pChannel_sys_bw);
 	pChannel_sys_bw->Enable(FALSE);
-	CMFCPropertyGridProperty* pChannel_noise_bw = new CMFCPropertyGridProperty(_T("噪声带宽"),_T("12456Hz"),_T("设置噪声带宽"));
-	pGroup_channel->AddSubItem(pChannel_noise_bw);
-	pChannel_noise_bw->Enable(FALSE);
-	CMFCPropertyGridProperty* pChannel_nsys_ratio = new CMFCPropertyGridProperty(_T("最小噪声/系统带宽"),_T("12456Hz"),_T("计算最小噪声/系统带宽"));
-	pGroup_channel->AddSubItem(pChannel_nsys_ratio);
-	pChannel_nsys_ratio->Enable(FALSE);
-	CMFCPropertyGridProperty* pChannel_snr = new CMFCPropertyGridProperty(_T("Eb/NO"),_T("00dB"),_T("计算信噪比"));
-	pGroup_channel->AddSubItem(pChannel_snr);
-	pChannel_snr->Enable(FALSE);
+// 	CMFCPropertyGridProperty* pChannel_noise_bw = new CMFCPropertyGridProperty(_T("噪声带宽"),_T("12456Hz"),_T("设置噪声带宽"));
+// 	pGroup_channel->AddSubItem(pChannel_noise_bw);
+// 	pChannel_noise_bw->Enable(FALSE);
+// 	CMFCPropertyGridProperty* pChannel_nsys_ratio = new CMFCPropertyGridProperty(_T("最小噪声/系统带宽"),_T("12456Hz"),_T("计算最小噪声/系统带宽"));
+// 	pGroup_channel->AddSubItem(pChannel_nsys_ratio);
+// 	pChannel_nsys_ratio->Enable(FALSE);
+// 	CMFCPropertyGridProperty* pChannel_snr = new CMFCPropertyGridProperty(_T("Eb/NO"),_T("00dB"),_T("计算信噪比"));
+// 	pGroup_channel->AddSubItem(pChannel_snr);
+// 	pChannel_snr->Enable(FALSE);
 	
 
 	m_main_property.AddProperty(pGroup_carrier);
@@ -334,6 +334,7 @@ LRESULT CTabProtocolConfig::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lpa
 	str = pProp->GetValue();
 	int id_changed = pProp->GetData();//获取当前值发生变化的属性的ID
 	regex ssidcmp("^[01]{4}$",regex::icase);
+	regex payload_lengthcmp("^[0-9]+$",regex::icase);
 	bool match_results1=false;
 	/*******************153c界面参数传入*************************/
 	SetFocus();
@@ -362,7 +363,7 @@ LRESULT CTabProtocolConfig::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lpa
 			pModulation_mcs->AllowEdit(FALSE);
 			p_wave->m_Maxspectrum = 1760;
 			T_Carri.pPropS1->SetValue("SC");//界面联动
-			pPayload_length->SetValue("30592");
+			pPayload_length->SetValue("3824");
 			pModulation_mode->SetValue("π/2 BPSK");
 			pModulation_mode->RemoveAllOptions();
 			pModulation_mode->AddOption(_T("π/2 BPSK"));
@@ -396,7 +397,7 @@ LRESULT CTabProtocolConfig::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lpa
 			pModulation_mcs->AllowEdit(FALSE);
 			p_wave->m_Maxspectrum = 2640;
 			T_Carri.pPropS1->SetValue("HSI");
-			pPayload_length->SetValue("5376");
+			pPayload_length->SetValue("1344");
 			pModulation_mode->SetValue("QPSK");
 			pModulation_mode->RemoveAllOptions();
 			pModulation_mode->AddOption(_T("QPSK"));
@@ -433,7 +434,7 @@ LRESULT CTabProtocolConfig::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lpa
 			pModulation_mcs->AllowEdit(FALSE);
 			p_wave->m_Maxspectrum = 2538;
 			T_Carri.pPropS1->SetValue("AV");
-			pPayload_length->SetValue("5184");
+			pPayload_length->SetValue("6912");
 			pModulation_mode->SetValue("QPSK");
 			pModulation_mode->RemoveAllOptions();
 			pModulation_mode->AddOption(_T("QPSK"));
@@ -977,21 +978,71 @@ LRESULT CTabProtocolConfig::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lpa
 				p_3c_params->data_source = 3;
 			break;
 		case PROTO_SIG_PAYLOADLENGTH_3C:
-			switch (p_3c_params->Sig_mode) 
 			{
-			case SC:
-				p_3c_params->SC_p.L_mb = atoi(str.GetBuffer());
-				break;
-			case HSI:
-				p_3c_params->HSI_p.L_mb = atoi(str.GetBuffer());
-				break;
-			case AV:
-				p_3c_params->AV_p.L_mb = atoi(str.GetBuffer());
-				break;
-			default:
+				str.Remove(' ');
+				match_results1=regex_match(str.GetBuffer(),payload_lengthcmp);
+				int sc_length;
+				int hsi_length;
+				int av_length;
+				sc_length=239 * 16;
+				hsi_length=336 * 4;
+				av_length=216 * 32;
+				if(match_results1)
+				{
+					switch (p_3c_params->Sig_mode) 
+					{
+					case SC:
+						p_3c_params->SC_p.L_mb = atoi(str.GetBuffer());
+						break;
+					case HSI:
+						p_3c_params->HSI_p.L_mb = atoi(str.GetBuffer());
+						break;
+					case AV:
+						p_3c_params->AV_p.L_mb = atoi(str.GetBuffer());
+						break;
+					default:
+						break;
+					}
+				}
+				else
+				{
+					MessageBox("负载长度输入错误，返回默认值");
+					switch (p_3c_params->Sig_mode) 
+					{
+					case SC:
+						p_3c_params->SC_p.L_mb = sc_length;
+						pPayload_length->SetValue("3824");
+						break;
+					case HSI:
+						p_3c_params->HSI_p.L_mb = hsi_length;
+						pPayload_length->SetValue("1344");
+						break;
+					case AV:
+						p_3c_params->AV_p.L_mb = av_length;
+						pPayload_length->SetValue("6912");
+						break;
+					default:
+						break;
+					}
+				}
 				break;
 			}
-			break;
+			
+// 			switch (p_3c_params->Sig_mode) 
+// 			{
+// 			case SC:
+// 				p_3c_params->SC_p.L_mb = atoi(str.GetBuffer());
+// 				break;
+// 			case HSI:
+// 				p_3c_params->HSI_p.L_mb = atoi(str.GetBuffer());
+// 				break;
+// 			case AV:
+// 				p_3c_params->AV_p.L_mb = atoi(str.GetBuffer());
+// 				break;
+// 			default:
+// 				break;
+// 			}
+// 			break;
 		case PROTO_SIG_GENLENGTH_3C:
 			switch (p_3c_params->Sig_mode) 
 			{
@@ -1024,7 +1075,7 @@ LRESULT CTabProtocolConfig::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lpa
 				pModulation_mcs->AllowEdit(FALSE);
 				p_wave->m_Maxspectrum = 2538;
 				T_Carri.pPropS1->SetValue("AV");
-				pPayload_length->SetValue("5184");
+				pPayload_length->SetValue("6912");
 				pModulation_mode->SetValue("QPSK");
 				pModulation_mode->RemoveAllOptions();
 				pModulation_mode->AddOption(_T("QPSK"));
@@ -1068,36 +1119,47 @@ LRESULT CTabProtocolConfig::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lpa
 			break;
 		case PROTO_SIG_SSID_3C:
 			{
-// 				match_results1=regex_match(str.GetBuffer(),ssidcmp);
-// 				double ssid_sc;
-// 				double ssid_hsi;
-// 				double ssid_av;
-// 				ssid_sc=p_3c_params->SC_p.ssid;
-// 				ssid_hsi=p_3c_params->HSI_p.ssid;
-// 				ssid_av=p_3c_params->AV_p.ssid;
-// 				if(match_results1)
-// 				{
-// 					int ssid = 0;
-// 					for (int i = 0; i < 4; ++i)
-// 						ssid += pow(double(2), double(3 - i)) * (str.GetAt(i) - '0');
-// 					p_3c_params->SC_p.ssid = ssid;
-// 					p_3c_params->HSI_p.ssid = ssid;
-// 					p_3c_params->AV_p.ssid = ssid;
-// 					break;
-// 				}
-// 				else
-// 				{
-// 					p_3c_params->SC_p.ssid = ssid_sc;
-// 					p_3c_params->HSI_p.ssid = ssid_hsi;
-// 					p_3c_params->AV_p.ssid = ssid_av;
-// 				}
- 				int ssid = 0;
- 				for (int i = 0; i < 4; ++i)
- 					ssid += pow(double(2), double(3 - i)) * (str.GetAt(i) - '0');
- 				p_3c_params->SC_p.ssid = ssid;
- 				p_3c_params->HSI_p.ssid = ssid;
- 				p_3c_params->AV_p.ssid = ssid;
- 				break;
+ 				match_results1=regex_match(str.GetBuffer(),ssidcmp);
+ 				int ssid_sc;
+ 				int ssid_hsi;
+ 				int ssid_av;
+ 				ssid_sc=p_3c_params->SC_p.ssid;
+ 				ssid_hsi=p_3c_params->HSI_p.ssid;
+ 				ssid_av=p_3c_params->AV_p.ssid;
+ 				if(match_results1)
+ 				{
+ 					int ssid = 0;
+ 					for (int i = 0; i < 4; ++i)
+ 						ssid += pow(double(2), double(3 - i)) * (str.GetAt(i) - '0');
+ 					p_3c_params->SC_p.ssid = ssid;
+ 					p_3c_params->HSI_p.ssid = ssid;
+ 					p_3c_params->AV_p.ssid = ssid;
+ 					break;
+ 				}
+ 				else
+ 				{
+ 					MessageBox("扰码初始序列输入错误，返回默认值0000");
+					p_3c_params->SC_p.ssid = 0;
+ 					p_3c_params->HSI_p.ssid = 0;
+ 					p_3c_params->AV_p.ssid = 0;
+					pPayload_ssid->SetValue("0000");
+  				}
+				break;
+//   				int ssid = 0;
+//   				for (int i = 0; i < 4; ++i)
+//   					ssid += pow(double(2), double(3 - i)) * (str.GetAt(i) - '0');
+//   				p_3c_params->SC_p.ssid = ssid;
+//   				p_3c_params->HSI_p.ssid = ssid;
+//   				p_3c_params->AV_p.ssid = ssid;
+//   				break;
+			}
+		case PROTO_CHAN_SYSBW:
+			{
+				double fc_final;
+				fc_final=atof(str.GetBuffer())*1000000000;
+				p_channel_params->fc=fc_final;
+				
+
 			}
 	default:
 		break;

@@ -286,9 +286,15 @@ LRESULT CTabCarrier::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lparam)
 		{
 			double quad_angle_ad = atof(str);
 			if (quad_angle_ad > 90)
+			{
+				MessageBox("正交角度设置超出最大值，返回最大值90");
 				quad_angle_ad = 90;
+			}
 			else if (quad_angle_ad < -90)
+			{
+				MessageBox("正交角度设置超出最小值，返回最小值-90");
 				quad_angle_ad = -90;
+			}
 			p_3c_params->quan_angle_adjust = quad_angle_ad;
 			str_temp.Format(_T("%.2lf Deg"), quad_angle_ad);
 			pProp->SetValue(str_temp);
@@ -310,9 +316,15 @@ LRESULT CTabCarrier::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lparam)
 		{
 			double IQ_gain = atof(str);
 			if (IQ_gain > 10)
+			{
+				MessageBox("I\Q平衡增益设置超出最大值，返回最大值10！");
 				IQ_gain = 10;
+			}
 			else if (IQ_gain < -10)
+			{
+				MessageBox("I\Q平衡增益设置超出最小值，返回最小值-10");
 				IQ_gain = -10;
+			}
 			p_3c_params->IQ_gain = IQ_gain;
 			str_temp.Format(_T("%.2lf dB"), IQ_gain);
 			pProp->SetValue(str_temp);
