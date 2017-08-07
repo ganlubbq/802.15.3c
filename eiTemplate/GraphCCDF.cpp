@@ -115,5 +115,13 @@ void CGraphCCDF::OnInitialUpdate()
 void CGraphCCDF::OnSelchangeComboCcdf()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	// 这里后续添加选择不同CCDF图切换的代码
+	switch(m_comboCCDF.GetCurSel())
+	{
+	case 0:
+		m_ccdf.burstflag();
+		break;
+	case 1:
+		m_ccdf.waveflag();
+		break;
+	}
 }

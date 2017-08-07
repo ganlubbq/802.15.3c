@@ -98,10 +98,10 @@ BOOL CTabProtocolConfig::OnInitDialog()
 	pCarrier_sig_mode->AddOption(_T("AV"));
 	pCarrier_sig_mode->AllowEdit(FALSE);
 	pGroup_carrier->AddSubItem(pCarrier_sig_mode);
-// 	CMFCPropertyGridProperty* pCarrier_frames = new CMFCPropertyGridProperty(_T("信号帧数"),_T("1"),_T("输入所需生成信号的帧数"));
-// 	pGroup_carrier->AddSubItem(pCarrier_frames);
-// 	pGroup_carrier->AllowEdit(FALSE);
-// 	pGroup_carrier->Enable(FALSE);
+ 	CMFCPropertyGridProperty* pCarrier_frames = new CMFCPropertyGridProperty(_T("信号帧数"),_T("1"),_T("输入所需生成信号的帧数"));
+ 	pGroup_carrier->AddSubItem(pCarrier_frames);
+ 	pGroup_carrier->AllowEdit(FALSE);
+ 	pGroup_carrier->Enable(FALSE);
 // 	pCarrier_data_length = new CMFCPropertyGridProperty(_T("数据长度"),_T("123456"),_T("输入所需生成信号数据长度"), PROTO_SIG_GENLENGTH_3C);
 // 	pGroup_carrier->AddSubItem(pCarrier_data_length);
 	CMFCPropertyGridProperty* pCarrier_freq_offset = new CMFCPropertyGridProperty(_T("频率偏移"),_T("10000.0000Hz"),_T("显示当前频率偏移值"));
@@ -126,20 +126,20 @@ BOOL CTabProtocolConfig::OnInitDialog()
 	pCarrier_switch_time->AllowEdit(FALSE);
 	pGroup_carrier->AddSubItem(pCarrier_switch_time);
 
-	//pGroup_control
+	/*pGroup_control*/
 	pGroup_control = new CMFCPropertyGridProperty("控制信息");
 	CMFCPropertyGridProperty* pControl_preamble = new CMFCPropertyGridProperty(_T("前导类型"),_T("short"),_T("选择生成信号的前导类型：short/long"));
-	pControl_preamble->AddOption(_T("short"));
-	pControl_preamble->AddOption(_T("long"));
+// 	pControl_preamble->AddOption(_T("short"));
+// 	pControl_preamble->AddOption(_T("long"));
 	pControl_preamble->AllowEdit(FALSE);
 	pGroup_control->AddSubItem(pControl_preamble);
 	CMFCPropertyGridProperty* pControl_aggregation = new CMFCPropertyGridProperty(_T("Aggregation"),_T("ON"),_T("选择生成信号的Aggregation：ON/OFF"));
-	pControl_aggregation->AddOption(_T("ON"));
-	pControl_aggregation->AddOption(_T("OFF"));
+// 	pControl_aggregation->AddOption(_T("ON"));
+// 	pControl_aggregation->AddOption(_T("OFF"));
 	pControl_aggregation->AllowEdit(FALSE);
 	pGroup_control->AddSubItem(pControl_aggregation);
 	CMFCPropertyGridPropertyButton *pControl_mac_config = new CMFCPropertyGridPropertyButton("MAC详细配置","","详细配置MAC信息");
-	pGroup_control->AddSubItem(pControl_mac_config);
+// 	pGroup_control->AddSubItem(pControl_mac_config);
 
 	//pGroup_modulation
 	pGroup_modulation = new CMFCPropertyGridProperty("调制编码");
@@ -335,7 +335,9 @@ LRESULT CTabProtocolConfig::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lpa
 	int id_changed = pProp->GetData();//获取当前值发生变化的属性的ID
 	regex ssidcmp("^[01]{4}$",regex::icase);
 	regex payload_lengthcmp("^[0-9]+$",regex::icase);
+	regex channel_cmp("^[0-9]+$",regex::icase);
 	bool match_results1=false;
+	CString str_temp;
 	/*******************153c界面参数传入*************************/
 	SetFocus();
 	switch (id_changed)
@@ -1155,10 +1157,31 @@ LRESULT CTabProtocolConfig::OnPropertyChanged(__in WPARAM wparam,__in LPARAM lpa
 			}
 		case PROTO_CHAN_SYSBW:
 			{
+				match_results1=regex_match(str.GetBuffer(),channel_cmp);
 				double fc_final;
-				fc_final=atof(str.GetBuffer())*1000000000;
-				p_channel_params->fc=fc_final;
-				
+				double fc_temp;
+				if (match_results1)
+				{
+					fc_temp=atof(str.GetBuffer());
+					fc_final=fc_temp*1000000000;
+					str_temp.Format(_T("%.2lf GHz"),fc_temp);
+					pChannel_sys_bw->SetValue(str_temp);
+					p_channel_params->fc=fc_final;
+				}
+				else
+				{
+					MessageBox("系统带宽输入错误，返回带宽默认值");
+					pChannel_sys_bw->SetValue("60GHz");
+					p_channel_params->fc=60000000000;
+				}
+// 				double fc_final;
+// 				double fc_temp;
+// 				fc_temp=atof(str.GetBuffer());
+// 				fc_final=fc_temp*1000000000;
+// 				str_temp.Format(_T("%.2lf GHz"),fc_temp);
+// 				pChannel_sys_bw->SetValue(str_temp);
+// 				p_channel_params->fc=fc_final;
+// 				
 
 			}
 	default:

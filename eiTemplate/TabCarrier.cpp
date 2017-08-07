@@ -82,8 +82,8 @@ BOOL CTabCarrier::OnInitDialog()
 // 	CMFCPropertyGridProperty *pPropS2=new CMFCPropertyGridProperty(_T("总采样点数"),_T("0000"),_T("采样点数目"));
 // 	pPropS2->Enable(FALSE);
 // 	pGroup11->AddSubItem(pPropS2);
-
-	pGroup12->AddSubItem(new CMFCPropertyGridProperty(_T("过采样率"),_T("1"),_T("关于过采样率的说明")));
+// 
+// 	pGroup12->AddSubItem(new CMFCPropertyGridProperty(_T("过采样率"),_T("1"),_T("关于过采样率的说明")));
 	CMFCPropertyGridProperty* pPropS3 = new CMFCPropertyGridProperty(_T("镜像频谱"),_T("Off"),_T("镜像频谱状态：ON或OFF"));
 	pPropS3->AddOption(_T("On"));  
 	pPropS3->AddOption(_T("Off"));     

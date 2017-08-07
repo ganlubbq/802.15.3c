@@ -12,6 +12,8 @@ IMPLEMENT_DYNAMIC(CC, CStatic)
 
 CC::CC()
 {
+	flag_wave            =FALSE;
+	flag_burst           =FALSE;
 	controlRunDraw       = FALSE;//控制是否进行绘制曲线的标记
 	m_ValueXRange        = 10;//X轴竖线个数10
 	m_ValueYRange        = 6;//Y轴横线个数6
@@ -235,43 +237,120 @@ void CC::DrawAxis(CDC *pDC)
 ////XY轴标题设置
 void CC::DrawXYtitle(CDC *pDC)//XY轴标题设置
 {
-	CFont *pOldFontTitle;
-	CString str;
+	if(flag_wave)
+	{
+		CFont *pOldFontTitle;
+		CString str;
 
-	pOldFontTitle = pDC->SelectObject(&m_FontAxis);//设置当前字体默认为Axis（数字字体）
-	pDC->SetTextColor(RGB(0,255,0));//设置默认颜色为
-	pDC->SetBkMode(TRANSPARENT);//设置默认输入为透明
-	pDC->SetTextAlign(TA_LEFT|TA_TOP);//设置默认文本为左对齐，置顶
-	pDC->SetTextAlign(TA_CENTER|TA_TOP);
+		pOldFontTitle = pDC->SelectObject(&m_FontAxis);//设置当前字体默认为Axis（数字字体）
+		pDC->SetTextColor(RGB(0,255,0));//设置默认颜色为
+		pDC->SetBkMode(TRANSPARENT);//设置默认输入为透明
+		pDC->SetTextAlign(TA_LEFT|TA_TOP);//设置默认文本为左对齐，置顶
+		pDC->SetTextAlign(TA_CENTER|TA_TOP);
 
-	//X轴标题
-	str="(Power/Avg.Power)/dB";
-	pDC->TextOut(m_BaseXline+m_rectCurve.Width()/2,m_BaseYline+17,str);
-	//头部标题
-	pOldFontTitle = pDC->SelectObject(&m_FontAxis);//设置当前字体默认为Axis（数字字体）
-	pDC->SetTextColor(RGB(0,128,0));//设置默认颜色为
-	str="Wave CCDF";
-	pDC->TextOut(m_BaseXline+10,m_BaseYline-m_rectCurve.Height()-24,str);
+		//X轴标题
+		str="(Power/Avg.Power)/dB";
+		pDC->TextOut(m_BaseXline+m_rectCurve.Width()/2,m_BaseYline+17,str);
+		//头部标题
+		pOldFontTitle = pDC->SelectObject(&m_FontAxis);//设置当前字体默认为Axis（数字字体）
+		pDC->SetTextColor(RGB(0,128,0));//设置默认颜色为
+		str="Wave CCDF";
+		pDC->TextOut(m_BaseXline+10,m_BaseYline-m_rectCurve.Height()-24,str);
+	}
+	else
+	{
+		CFont *pOldFontTitle;
+		CString str;
+
+		pOldFontTitle = pDC->SelectObject(&m_FontAxis);//设置当前字体默认为Axis（数字字体）
+		pDC->SetTextColor(RGB(0,255,0));//设置默认颜色为
+		pDC->SetBkMode(TRANSPARENT);//设置默认输入为透明
+		pDC->SetTextAlign(TA_LEFT|TA_TOP);//设置默认文本为左对齐，置顶
+		pDC->SetTextAlign(TA_CENTER|TA_TOP);
+
+		//X轴标题
+		str="(Power/Avg.Power)/dB";
+		pDC->TextOut(m_BaseXline+m_rectCurve.Width()/2,m_BaseYline+17,str);
+		//头部标题
+		pOldFontTitle = pDC->SelectObject(&m_FontAxis);//设置当前字体默认为Axis（数字字体）
+		pDC->SetTextColor(RGB(0,128,0));//设置默认颜色为
+		str="Burst CCDF";
+		pDC->TextOut(m_BaseXline+10,m_BaseYline-m_rectCurve.Height()-24,str);
+	}
+// 	CFont *pOldFontTitle;
+// 	CString str;
+// 
+// 	pOldFontTitle = pDC->SelectObject(&m_FontAxis);//设置当前字体默认为Axis（数字字体）
+// 	pDC->SetTextColor(RGB(0,255,0));//设置默认颜色为
+// 	pDC->SetBkMode(TRANSPARENT);//设置默认输入为透明
+// 	pDC->SetTextAlign(TA_LEFT|TA_TOP);//设置默认文本为左对齐，置顶
+// 	pDC->SetTextAlign(TA_CENTER|TA_TOP);
+// 
+// 	//X轴标题
+// 	str="(Power/Avg.Power)/dB";
+// 	pDC->TextOut(m_BaseXline+m_rectCurve.Width()/2,m_BaseYline+17,str);
+// 	//头部标题
+// 	pOldFontTitle = pDC->SelectObject(&m_FontAxis);//设置当前字体默认为Axis（数字字体）
+// 	pDC->SetTextColor(RGB(0,128,0));//设置默认颜色为
+// 	str="Wave CCDF";
+// 	pDC->TextOut(m_BaseXline+10,m_BaseYline-m_rectCurve.Height()-24,str);
 }
 //绘制波形函数
 void CC::DrawCurveA(CDC *pDC)
 {
-	CPen *pOldPen = pDC->SelectObject(&m_PenCurveA);//设置当前画笔为m_PenCurveA
-	pPointArrayCCDFIndex =(POINT *) new POINT[m_AllNum];//设定一个数组
-	//pPointArrayCCDFIndex[0].x=m_BaseXline;
-	//pPointArrayCCDFIndex[0].y=m_RealBaseYLine;
-	for (int flg=0;flg<m_AllNum;flg++)
+	if(flag_wave)
 	{
-		pPointArrayCCDFIndex[flg].x = m_BaseXline+flg*m_RealValueXInterval;
-		pPointArrayCCDFIndex[flg].y = m_RealBaseYLine+(-log10(pPointArrayCCDF[flg]))*(m_rectCurve.Height()/(double)m_ValueYRange);
-	
-		if(pPointArrayCCDFIndex[flg].y<m_RealBaseYLine)
-			pPointArrayCCDFIndex[flg].y=m_RealBaseYLine+m_rectCurve.Height();
+		CPen *pOldPen = pDC->SelectObject(&m_PenCurveA);//设置当前画笔为m_PenCurveA
+		pPointArrayCCDFIndex =(POINT *) new POINT[m_AllNum];//设定一个数组
+		//pPointArrayCCDFIndex[0].x=m_BaseXline;
+		//pPointArrayCCDFIndex[0].y=m_RealBaseYLine;
+		for (int flg=0;flg<m_AllNum;flg++)
+		{
+			pPointArrayCCDFIndex[flg].x = m_BaseXline+flg*m_RealValueXInterval;
+			pPointArrayCCDFIndex[flg].y = m_RealBaseYLine+(-log10(pPointArrayCCDF[flg]))*(m_rectCurve.Height()/(double)m_ValueYRange);
+
+			if(pPointArrayCCDFIndex[flg].y<m_RealBaseYLine)
+				pPointArrayCCDFIndex[flg].y=m_RealBaseYLine+m_rectCurve.Height();
+		}
+
+		pDC->Polyline(pPointArrayCCDFIndex,m_AllNum);//将组成曲线的点全部绘制出来
+		pDC->SelectObject(pOldPen);//释放画笔
+		pDC->SelectClipRgn(NULL);
 	}
-	
-	pDC->Polyline(pPointArrayCCDFIndex,m_AllNum);//将组成曲线的点全部绘制出来
-	pDC->SelectObject(pOldPen);//释放画笔
-	pDC->SelectClipRgn(NULL);
+	else
+	{
+		CPen *pOldPen = pDC->SelectObject(&m_PenCurveA);//设置当前画笔为m_PenCurveA
+		pPointArrayBURSTIndex =(POINT *) new POINT[m_AllNum];//设定一个数组
+
+		for (int flg=0;flg<m_AllNum;flg++)
+		{
+			pPointArrayBURSTIndex[flg].x = m_BaseXline+flg*m_RealValueXInterval;
+			pPointArrayBURSTIndex[flg].y = m_RealBaseYLine+(-log10(pPointArrayCCDF2[flg]))*(m_rectCurve.Height()/(double)m_ValueYRange);
+
+			if(pPointArrayBURSTIndex[flg].y<m_RealBaseYLine)
+				pPointArrayBURSTIndex[flg].y=m_RealBaseYLine+m_rectCurve.Height();
+		}
+
+		pDC->Polyline(pPointArrayBURSTIndex,m_AllNum);//将组成曲线的点全部绘制出来
+		pDC->SelectObject(pOldPen);//释放画笔
+		pDC->SelectClipRgn(NULL);
+	}
+// 	CPen *pOldPen = pDC->SelectObject(&m_PenCurveA);//设置当前画笔为m_PenCurveA
+// 	pPointArrayCCDFIndex =(POINT *) new POINT[m_AllNum];//设定一个数组
+// 	//pPointArrayCCDFIndex[0].x=m_BaseXline;
+// 	//pPointArrayCCDFIndex[0].y=m_RealBaseYLine;
+// 	for (int flg=0;flg<m_AllNum;flg++)
+// 	{
+// 		pPointArrayCCDFIndex[flg].x = m_BaseXline+flg*m_RealValueXInterval;
+// 		pPointArrayCCDFIndex[flg].y = m_RealBaseYLine+(-log10(pPointArrayCCDF[flg]))*(m_rectCurve.Height()/(double)m_ValueYRange);
+// 	
+// 		if(pPointArrayCCDFIndex[flg].y<m_RealBaseYLine)
+// 			pPointArrayCCDFIndex[flg].y=m_RealBaseYLine+m_rectCurve.Height();
+// 	}
+// 	
+// 	pDC->Polyline(pPointArrayCCDFIndex,m_AllNum);//将组成曲线的点全部绘制出来
+// 	pDC->SelectObject(pOldPen);//释放画笔
+// 	pDC->SelectClipRgn(NULL);
 }
 
 void CC::Update()
@@ -298,4 +377,14 @@ void  CC::runDraw()
 {
 	controlRunDraw = TRUE;
 	Invalidate();
+}
+void CC::waveflag(){
+	flag_wave = TRUE ;
+	flag_burst= FALSE;
+	runDraw();
+}
+void CC::burstflag(){
+	flag_burst = TRUE ;
+	flag_wave = FALSE;
+	runDraw();
 }

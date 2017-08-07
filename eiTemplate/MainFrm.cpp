@@ -477,6 +477,7 @@ UINT ThreadFune(LPVOID lpParam)
 	double max_power;
 	double max_specturm;
 	double max_ccdf;
+	double max_ccdf2;
 	CProgressCtrl *p_m_progress = DataAndGraph->p_m_progress;
 	/************************************************************************/
 	/* 生成蓝牙基带信号                                                     */
@@ -539,6 +540,10 @@ UINT ThreadFune(LPVOID lpParam)
 	vector<complex<double> > dataout_chan;
 	p_m_progress->StepIt();
 	waveform_generator_3c(macheader, macbody, dataout, *DataAndGraph->p_protocol_params_3c);
+	//导出数据
+// 	int nums_zeroes;
+// 	int nums_frames;
+// 	for(int i=0,i<)
 	p_m_progress->StepIt();
 	int sig_len = 0;
 	if ((*DataAndGraph->p_protocol_params_channel).chanel_switch == 0)
@@ -734,6 +739,38 @@ UINT ThreadFune(LPVOID lpParam)
 	p_ccdf->runDraw();
 
 	p_m_progress->StepIt();
+	/******************************************************************************/
+	/* Wave CCDF图的绘制                                                         */
+	/******************************************************************************/
+	p_ccdf->m_RealValuenSize2 = sig_len+36250; //运行生成的数据补0后的长度
+
+	double *pPointArrayCCDF2;
+	//设定一个中间变量数组，存放实际数据的功率
+	pPointArrayCCDF2 =(double*)new double[sig_len+36250];
+
+	//CCDF设定一个数组，固定长度
+	//确定间隔个数 == X轴总点数-1
+	Num_of_space=(p_ccdf->m_AllNum)-1;
+	m_AllNum=p_ccdf->m_AllNum;
+	ScaleXend=p_ccdf->m_ScaleValueXEnd;
+	p_ccdf->pPointArrayCCDF2=(double*)new double[m_AllNum];
+
+	for (i=0;i<sig_len;i++)
+	{
+		pPointArrayCCDF2[i]=pow(I_gfsk[i],2)+pow(Q_gfsk[i],2);
+	}
+	for (i=sig_len;i<sig_len+36250;i++)
+	{
+		pPointArrayCCDF2[i]=0;
+	}
+
+	max_ccdf2=sumCCDF(p_ccdf->pPointArrayCCDF2,pPointArrayCCDF2,sig_len+36250,ScaleXend,Num_of_space);
+
+	p_ccdf->m_maxCCDFX2=max_ccdf2;
+
+	p_ccdf->runDraw();
+
+	p_ccdf->burstflag();	//图像生成完毕后首先显示Burst CCDF图像
 	//在图像的绘制操作完成后，再使能两个图像上的comboBox
 	DataAndGraph->p_graphCCDF->m_comboCCDF.SetCurSel(0);
 	DataAndGraph->p_graphWAVE->m_comboWAVE.SetCurSel(0);
