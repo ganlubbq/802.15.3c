@@ -553,6 +553,26 @@ UINT ThreadFune(LPVOID lpParam)
 		tg3c_tsv_eval_r7((*DataAndGraph->p_protocol_params_channel).cm_num,(*DataAndGraph->p_protocol_params_channel).fc,dataout,dataout_chan);
 		sig_len = dataout_chan.size();
 	}
+
+	/*设置帧数与帧间间隔*/
+// 	int num_zeroes=DataAndGraph->p_protocol_params_3c->num_of_zeroes;
+// 	int num_frame=DataAndGraph->p_protocol_params_3c->num_of_frame;
+	ofstream of("153c.csv");
+	int num_zeroes=DataAndGraph->p_protocol_params_3c->num_of_zeroes;
+	int num_frame=DataAndGraph->p_protocol_params_3c->num_of_frame;
+ 	for (int i=0;i<num_frame;i++)
+ 	{
+ 		for (int j=0;j<sig_len;j++)
+ 		{
+ 			of<<dataout[j].real()<<","<<dataout[j].imag()<<endl;
+ 		}
+ 		for (int idle=0;idle<num_zeroes;idle++)
+ 		{
+ 			of<<0<<","<<0<<endl;
+ 		}
+ 	}
+	of.close();
+
 	double I_Q_max=0.0,I_data,Q_data=0.0;
 	double *I_gfsk=new double[sig_len];
 	double *Q_gfsk=new double[sig_len];
